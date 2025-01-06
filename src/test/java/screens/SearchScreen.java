@@ -15,7 +15,7 @@ public class SearchScreen {
         if (searchText == null || searchText.isEmpty()) {
             throw new IllegalArgumentException("Search text cannot be null or empty.");
         }
-        $(accessibilityId("Search Wikipedia")).shouldBe(visible).click();
+        $(accessibilityId("Search Wikipedia")).click();
         $(id("org.wikipedia.alpha:id/search_src_text")).shouldBe(visible).setValue(searchText);
     }
 
