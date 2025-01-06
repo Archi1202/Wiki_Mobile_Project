@@ -15,12 +15,12 @@ public class SearchScreen {
             throw new IllegalArgumentException("Search text cannot be null or empty.");
         }
         $(accessibilityId("Search Wikipedia")).click();
-        $(id("org.wikipedia.alpha:id/search_src_text")).setValue(searchText);
+        $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys(searchText);
     }
 
     @Step("Navigating to the first result from the search results")
     public static void openFirstSearchResult() {
-        $(id("org.wikipedia.alpha:id/page_list_item_title")).click();
+        $$(id("org.wikipedia.alpha:id/page_list_item_title")).first().click();
     }
 
     @Step("Verifying search results are found")
