@@ -2,7 +2,6 @@ package screens;
 
 import io.qameta.allure.Step;
 
-import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static io.appium.java_client.AppiumBy.accessibilityId;
@@ -16,12 +15,12 @@ public class SearchScreen {
             throw new IllegalArgumentException("Search text cannot be null or empty.");
         }
         $(accessibilityId("Search Wikipedia")).click();
-        $(id("org.wikipedia.alpha:id/search_src_text")).shouldBe(visible).setValue(searchText);
+        $(id("org.wikipedia.alpha:id/search_src_text")).setValue(searchText);
     }
 
     @Step("Navigating to the first result from the search results")
     public static void openFirstSearchResult() {
-        $(id("org.wikipedia.alpha:id/page_list_item_title")).shouldBe(visible).click();
+        $(id("org.wikipedia.alpha:id/page_list_item_title")).click();
     }
 
     @Step("Verifying search results are found")

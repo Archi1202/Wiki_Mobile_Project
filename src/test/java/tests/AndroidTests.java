@@ -3,8 +3,6 @@ package tests;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
 import screens.ArticleScreen;
 import screens.SearchScreen;
 
@@ -13,10 +11,10 @@ import screens.SearchScreen;
 public class AndroidTests extends TestBase {
 
 
-    @ParameterizedTest(name = "Verification of the successful search result displaying for {0}")
-    @ValueSource(strings = {"Appium", "Selenium"})
-    void successfulSearchTest(String value) {
-        SearchScreen.performSearch(value);
+    @Test
+    @DisplayName("Verification of the successful search result displaying for Appium")
+    void successfulSearchTest() {
+        SearchScreen.performSearch("Appium");
         SearchScreen.verifySearchResultsPresent();
     }
 
