@@ -42,13 +42,19 @@ public class EmulationDriver implements WebDriverProvider {
         return new AndroidDriver(getAppiumServerUrl(), options);
     }
 
-    public static URL getAppiumServerUrl() {
+    public URL getAppiumServerUrl() {
+        String serverUrl = config.getAppiumServerUrl();
+        if (serverUrl == null || serverUrl.isEmpty()) {
+            throw new IllegalArgumentException("Appium server URL is null or empty in the configuration.");
+        }
+
         try {
-            return new URL(config.getAppiumServerUrl());
+            return new URL(serverUrl);
         } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
+            throw new IllegalArgumentException("Invalid Appium server URL: " + serverUrl, e);
         }
     }
+
 
     private String getAppPath() {
         String appVersion = "app-alpha-universal-release.apk";
