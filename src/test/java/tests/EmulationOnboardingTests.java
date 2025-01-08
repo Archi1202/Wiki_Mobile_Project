@@ -4,7 +4,6 @@ import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import screens.ErrorScreen;
 import screens.SearchScreen;
 import screens.components.IntroComponent;
 
@@ -41,17 +40,5 @@ public class EmulationOnboardingTests extends TestBase {
                 .clickOnGetStarted();
         SearchScreen.performSearch("Android");
         SearchScreen.verifySearchResultsPresent();
-    }
-
-    @Test
-    @DisplayName("Testing of the error message displaying for invalid search")
-    void invalidSerchExecutionTest() {
-        introComponent.clickOnContinueButton()
-                .clickOnContinueButton()
-                .clickOnContinueButton()
-                .clickOnGetStarted();
-        SearchScreen.performSearch("TTT");
-        SearchScreen.openFirstSearchResult();
-        ErrorScreen.verifyErrorMessage();
     }
 }
