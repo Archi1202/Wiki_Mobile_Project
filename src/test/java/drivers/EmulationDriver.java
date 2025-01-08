@@ -21,7 +21,7 @@ import static org.apache.commons.io.FileUtils.copyInputStreamToFile;
 
 public class EmulationDriver implements WebDriverProvider {
 
-    private final EmulationConfig config;
+    static EmulationConfig config;
 
     public EmulationDriver() {
         config = ConfigFactory.create(EmulationConfig.class, System.getProperties());
@@ -42,7 +42,7 @@ public class EmulationDriver implements WebDriverProvider {
         return new AndroidDriver(getAppiumServerUrl(), options);
     }
 
-    public URL getAppiumServerUrl() {
+    public static URL getAppiumServerUrl() {
         try {
             return new URL(config.getAppiumServerUrl());
         } catch (MalformedURLException e) {
