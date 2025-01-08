@@ -1,14 +1,17 @@
 package tests;
 
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import screens.SearchScreen;
 import screens.components.IntroComponent;
 
-
+@Tag("emulation")
+@Owner("Anuar Zhangeldi")
 @DisplayName("Tests for Wikipedia Onboarding Screens")
 
-public class OnboardingTests extends TestBase{
+public class EmulationOnboardingTests extends TestBase{
     public final IntroComponent introComponent = new IntroComponent();
 
     public final SearchScreen searchScreen = new SearchScreen();
