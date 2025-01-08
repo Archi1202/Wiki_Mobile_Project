@@ -2,6 +2,7 @@ package screens;
 
 import io.qameta.allure.Step;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static io.appium.java_client.AppiumBy.accessibilityId;
@@ -28,6 +29,11 @@ public class SearchScreen {
         assertThat($$(id("org.wikipedia.alpha:id/page_list_item_title")))
                 .as("Expected at least one search result")
                 .hasSizeGreaterThan(0);
+    }
+
+    @Step("Check that on the Main Search Screen displayed")
+    public void checkAnnoncementText(String text){
+        $(id("org.wikipedia.alpha:id/view_announcement_text")).shouldHave(text(text));
     }
 
 }

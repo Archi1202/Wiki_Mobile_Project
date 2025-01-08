@@ -3,7 +3,7 @@ package tests;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import screens.ArticleScreen;
+import screens.ErrorScreen;
 import screens.SearchScreen;
 
 @Owner("Anuar Zhangeldi")
@@ -23,7 +23,7 @@ public class AndroidTests extends TestBase {
     void invalidSerchExecutionTest() {
         SearchScreen.performSearch("GGG");
         SearchScreen.openFirstSearchResult();
-        ArticleScreen.verifyErrorMessage();
+        ErrorScreen.verifyErrorMessage();
     }
 
 }

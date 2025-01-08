@@ -39,6 +39,7 @@ dependencies {
             'org.assertj:assertj-core:3.26.3',
             'org.slf4j:slf4j-simple:2.0.16',
             'io.github.bonigarcia:webdrivermanager:5.5.3',
+            'commons-io:commons-io:2.11.0',
             'org.aeonbits.owner:owner:1.0.12',
             "io.appium:java-client:$appiumVersion"
     )
