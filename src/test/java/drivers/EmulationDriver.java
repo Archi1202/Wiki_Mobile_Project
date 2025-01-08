@@ -21,7 +21,11 @@ import static org.apache.commons.io.FileUtils.copyInputStreamToFile;
 
 public class EmulationDriver implements WebDriverProvider {
 
-    public static final EmulationConfig config = ConfigFactory.create(EmulationConfig.class, System.getProperties());
+    private final EmulationConfig config;
+
+    public EmulationDriver() {
+        config = ConfigFactory.create(EmulationConfig.class, System.getProperties());
+    }
 
     @Nonnull
     @Override
