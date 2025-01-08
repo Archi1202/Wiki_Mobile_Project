@@ -3,8 +3,8 @@ package configs;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "classpath:properties/${env}.properties",
-        "classpath:properties/emulation.properties"})
+        "classpath:${env}.properties",
+        "classpath:emulation.properties"})
 
 public interface EmulationConfig extends Config {
     @Key("appiumServerUrl")
