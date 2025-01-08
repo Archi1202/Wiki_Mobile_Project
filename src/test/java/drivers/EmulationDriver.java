@@ -20,19 +20,12 @@ import static io.appium.java_client.remote.MobilePlatform.ANDROID;
 import static org.apache.commons.io.FileUtils.copyInputStreamToFile;
 
 public class EmulationDriver implements WebDriverProvider {
-    public static final EmulationConfig config = ConfigFactory.create(EmulationConfig.class,System.getProperties());
 
-    public static URL getAppiumServerUrl(){
-        try{
-            return new URL(config.getAppiumServerUrl());
-        } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
-        }
-    }
+    public static final EmulationConfig config = ConfigFactory.create(EmulationConfig.class, System.getProperties());
 
     @Nonnull
     @Override
-    public WebDriver createDriver(@Nonnull Capabilities capabilities){
+    public WebDriver createDriver(@Nonnull Capabilities capabilities) {
         UiAutomator2Options options = new UiAutomator2Options();
         options.setAutomationName(ANDROID_UIAUTOMATOR2)
                 .setPlatformName(ANDROID)
@@ -42,7 +35,15 @@ public class EmulationDriver implements WebDriverProvider {
                 .setAppPackage(config.getAppPackage())
                 .setAppActivity(config.getAppActivity());
 
-        return new AndroidDriver(getAppiumServerUrl(),options);
+        return new AndroidDriver(getAppiumServerUrl(), options);
+    }
+
+    public URL getAppiumServerUrl() {
+        try {
+            return new URL(config.getAppiumServerUrl());
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private String getAppPath() {
