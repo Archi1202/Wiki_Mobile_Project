@@ -15,11 +15,12 @@ public class IntroComponent {
             skipButton = $(id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")),
             primaryText = $(id("org.wikipedia.alpha:id/primaryTextView"));
 
-    @Step("Verify the Title for Onboarding screen with text %s")
+    @Step("Verify the Title for Onboarding screen with text {title}")
     public IntroComponent verifyTitleOnTheScreen(String title) {
         primaryText.shouldHave(text(title));
         return this;
     }
+
 
     @Step("Click on the Skip button")
     public IntroComponent clickOnSkipButton() {

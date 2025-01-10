@@ -27,7 +27,7 @@ public class SearchTests extends TestBase {
     @Test
     @Tag("browserstack")
     @DisplayName("Testing of the error message displaying for invalid search")
-    void invalidSerchExecutionTest() {
+    void invalidSearchExecutionTest() {
         searchScreen.performSearch("GGG");
         searchScreen.openFirstSearchResult();
         errorScreen.verifyErrorMessage();
@@ -35,7 +35,7 @@ public class SearchTests extends TestBase {
 
     @Test
     @Tag("emulation")
-    @DisplayName("Verification of the successful search result displaying for Appium")
+    @DisplayName("Verification of the successful search result displaying for Android in Emulator")
     void successfulEmulationSearchTest() {
         introComponent.clickOnSkipButton();
         searchScreen.performSearch("Android");
