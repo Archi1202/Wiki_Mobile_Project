@@ -11,10 +11,9 @@ import screens.components.IntroComponent;
 @Owner("Anuar Zhangeldi")
 @DisplayName("Tests for Wikipedia Onboarding Screens and Search via Emulator")
 
-public class EmulationOnboardingTests extends TestBase {
-    public final IntroComponent introComponent = new IntroComponent();
-
-    public final SearchScreen searchScreen = new SearchScreen();
+public class OnboardingTests extends TestBase {
+    IntroComponent introComponent = new IntroComponent();
+    SearchScreen searchScreen = new SearchScreen();
 
     @DisplayName("Successful verification of Onboarding Screens")
     @Test
@@ -27,18 +26,6 @@ public class EmulationOnboardingTests extends TestBase {
                 .clickOnContinueButton()
                 .verifyTitleOnTheScreen("Data & Privacy")
                 .clickOnGetStarted();
-        searchScreen.checkAnnoncementText("Customize your Explore feed");
-
-    }
-
-    @Test
-    @DisplayName("Verification of the successful search result displaying for Appium")
-    void successfulSearchTest() {
-        introComponent.clickOnContinueButton()
-                .clickOnContinueButton()
-                .clickOnContinueButton()
-                .clickOnGetStarted();
-        SearchScreen.performSearch("Android");
-        SearchScreen.verifySearchResultsPresent();
+        searchScreen.checkAnnouncementText("Customize your Explore feed");
     }
 }

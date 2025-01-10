@@ -1,3 +1,9 @@
+# Default ignored files
+HELP.md
+build/
+!**/src/main/**
+!**/src/test/**
+
 # Compiled class file
 *.class
 
@@ -6,6 +12,16 @@
 
 # BlueJ files
 *.ctxt
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### Gradle ###
+.gradle
+gradlew*
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/

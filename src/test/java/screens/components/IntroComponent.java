@@ -9,13 +9,21 @@ import static io.appium.java_client.AppiumBy.id;
 
 public class IntroComponent {
 
-    private final SelenideElement continueButton = $(id("org.wikipedia.alpha:id/fragment_onboarding_forward_button"));
-    private final SelenideElement getStartedButton = $(id("org.wikipedia.alpha:id/fragment_onboarding_done_button"));
-    private final SelenideElement primaryText = $(id("org.wikipedia.alpha:id/primaryTextView"));
+    private final SelenideElement
+            continueButton = $(id("org.wikipedia.alpha:id/fragment_onboarding_forward_button")),
+            getStartedButton = $(id("org.wikipedia.alpha:id/fragment_onboarding_done_button")),
+            skipButton = $(id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")),
+            primaryText = $(id("org.wikipedia.alpha:id/primaryTextView"));
 
     @Step("Verify the Title for Onboarding screen with text %s")
     public IntroComponent verifyTitleOnTheScreen(String title) {
         primaryText.shouldHave(text(title));
+        return this;
+    }
+
+    @Step("Click on the Skip button")
+    public IntroComponent clickOnSkipButton() {
+        skipButton.click();
         return this;
     }
 
@@ -26,7 +34,8 @@ public class IntroComponent {
     }
 
     @Step("Click on the Get Started")
-    public void clickOnGetStarted() {
+    public IntroComponent clickOnGetStarted() {
         getStartedButton.click();
+        return this;
     }
 }
