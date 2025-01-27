@@ -8,11 +8,6 @@ import org.aeonbits.owner.Config;
 })
 
 public interface WebDriverConfig extends Config {
-    @Key("browserstack.user")
-    String getBrowserstackUser();
-
-    @Key("browserstack.key")
-    String getBrowserstackKey();
 
     @Key("app")
     @DefaultValue("bs://sample.app")

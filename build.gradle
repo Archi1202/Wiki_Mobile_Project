@@ -36,14 +36,15 @@ dependencies {
             "io.qameta.allure:allure-selenide:$allureVersion",
             "com.codeborne:selenide:$selenideVersion",
             "org.junit.jupiter:junit-jupiter:5.11.1",
-            'org.assertj:assertj-core:3.26.3',
-            'org.slf4j:slf4j-simple:2.0.16',
-            'io.github.bonigarcia:webdrivermanager:5.5.3',
-            'commons-io:commons-io:2.11.0',
-            'org.aeonbits.owner:owner:1.0.12',
+            "org.assertj:assertj-core:3.26.3",
+            "org.slf4j:slf4j-simple:2.0.16",
+            "io.github.bonigarcia:webdrivermanager:5.5.3",
+            "commons-io:commons-io:2.11.0",
+            "org.aeonbits.owner:owner:1.0.12",
             "io.appium:java-client:$appiumVersion"
     )
-    testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.11.1')
+    testImplementation 'org.projectlombok:lombok:1.18.36'
+    annotationProcessor 'org.projectlombok:lombok:1.18.36'
 }
 
 tasks.withType(JavaCompile) {
@@ -59,16 +60,5 @@ tasks.withType(Test) {
             events "started", "skipped", "failed", "standard_error", "standard_out"
             exceptionFormat "short"
         }
-    }
-}
-task browserstack(type: Test) {
-    useJUnitPlatform {
-        includeTags("browserstack")
-    }
-}
-
-task emulation(type: Test) {
-    useJUnitPlatform {
-        includeTags("emulation")
     }
 }

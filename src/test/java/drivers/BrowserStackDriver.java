@@ -1,7 +1,9 @@
 package drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
+import configs.AuthConfig;
 import configs.WebDriverConfig;
+import helpers.Browserstack;
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.MutableCapabilities;
@@ -14,16 +16,22 @@ import java.net.URL;
 
 public class BrowserStackDriver implements WebDriverProvider {
 
-    public static final WebDriverConfig config = ConfigFactory.create(WebDriverConfig.class, System.getProperties());
+    WebDriverConfig config = ConfigFactory.create(WebDriverConfig.class, System.getProperties());
+    AuthConfig authConfig =ConfigFactory.create(AuthConfig.class,System.getProperties());
+
+    public Browserstack browserstack = new Browserstack();
+
 
     @Nonnull
     @Override
     public WebDriver createDriver(@Nonnull Capabilities capabilities) {
         MutableCapabilities caps = new MutableCapabilities();
 
-        caps.setCapability("browserstack.user", config.getBrowserstackUser());
-        caps.setCapability("browserstack.key", config.getBrowserstackKey());
-        caps.setCapability("app", config.getApp());
+        caps.setCapability("browserstack.user", authConfig.getBrowserstackUser());
+        caps.setCapability("browserstack.key", authConfig.getBrowserstackKey());
+
+        caps.setCapability("app", browserstack.checkUploadedAppsList());
+
         caps.setCapability("device", config.getDevice());
         caps.setCapability("os_version", config.getOsVersion());
         try {

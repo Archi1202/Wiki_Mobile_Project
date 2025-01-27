@@ -2,7 +2,6 @@ package tests;
 
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import screens.ErrorScreen;
 import screens.SearchScreen;
@@ -17,25 +16,22 @@ public class SearchTests extends TestBase {
     ErrorScreen errorScreen = new ErrorScreen();
 
     @Test
-    @Tag("browserstack")
-    @DisplayName("Verification of the successful search result displaying for Appium")
+    @DisplayName("Verification of the successful search result displaying for {searchText}")
     void successfulSearchTest() {
         searchScreen.performSearch("Appium");
         searchScreen.verifySearchResultsPresent();
     }
 
     @Test
-    @Tag("browserstack")
     @DisplayName("Testing of the error message displaying for invalid search")
     void invalidSearchExecutionTest() {
-        searchScreen.performSearch("GGG");
+        searchScreen.performSearch("GGGGGG");
         searchScreen.openFirstSearchResult();
         errorScreen.verifyErrorMessage();
     }
 
     @Test
-    @Tag("emulation")
-    @DisplayName("Verification of the successful search result displaying for Android in Emulator")
+    @DisplayName("Verification of the successful search result displaying for {searchText} in Emulator")
     void successfulEmulationSearchTest() {
         introComponent.clickOnSkipButton();
         searchScreen.performSearch("Android");
