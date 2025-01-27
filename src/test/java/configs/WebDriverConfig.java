@@ -9,10 +9,6 @@ import org.aeonbits.owner.Config;
 
 public interface WebDriverConfig extends Config {
 
-    @Key("app")
-    @DefaultValue("bs://sample.app")
-    String getApp();
-
     @Key("remoteUrl")
     @DefaultValue("https://hub.browserstack.com/wd/hub")
     String getRemoteUrl();

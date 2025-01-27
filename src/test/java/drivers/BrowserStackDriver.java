@@ -2,6 +2,7 @@ package drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
 import configs.AuthConfig;
+import configs.ConfigReader;
 import configs.WebDriverConfig;
 import helpers.Browserstack;
 import org.openqa.selenium.Capabilities;
@@ -19,14 +20,13 @@ public class BrowserStackDriver implements WebDriverProvider {
 
     private static final Logger logger = LoggerFactory.getLogger(BrowserStackDriver.class);
 
-    private final WebDriverConfig config;
-    private final AuthConfig authConfig;
-    private final Browserstack browserstack;
+    WebDriverConfig config;
+    AuthConfig authConfig;
+    Browserstack browserstack;
 
-    public BrowserStackDriver(WebDriverConfig config, AuthConfig authConfig, Browserstack browserstack) {
-        this.config = config;
-        this.authConfig = authConfig;
-        this.browserstack = browserstack;
+    public void BrowserstackDriver() {
+        this.config = ConfigReader.INSTANCE.getWebDriverConfig();
+        this.authConfig = ConfigReader.INSTANCE.getAuthConfig();
     }
 
     @Nonnull
