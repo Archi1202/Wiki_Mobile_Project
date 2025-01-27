@@ -1,88 +1,128 @@
-# Wikipedia Mobile App Automation Testing with Java, Selenide, Appium, and Jenkins 🚀
+# Wiki Mobile Project
 
-Welcome to the **Wikipedia Mobile App Automation Testing** project! This repository showcases how to automate testing for the Wikipedia mobile application using **Java**, **Selenide**, **Appium**, and **Jenkins**. Additionally, it integrates **BrowserStack** for cloud-based device testing and **Telegram** for notifications of ended reports.
+## Project Overview
+The Wiki Mobile Project is an automated testing framework designed for testing mobile applications. It leverages modern tools and frameworks to ensure high-quality standards and efficient testing workflows.
 
----
-
-## 📝 Introduction
-
-This project is designed to:
-
-- Automate the testing of the Wikipedia mobile application across various devices and platforms.
-- Utilize a robust tech stack to ensure comprehensive test coverage and efficient execution.
-- Implement continuous integration and delivery (CI/CD) practices using Jenkins.
-- Provide real-time test execution feedback through Telegram notifications.
-
----
-
-## 🧪 Test Cases
-
-### Covered Scenarios:
-
-1. **Search Functionality**:
-   - Verify that users can search for articles successfully.
-   - Ensure search suggestions appear as users type queries.
-   - Validate that tapping on a suggestion opens the correct article.
-
-2. **Article Navigation**:
-   - Test navigation between linked articles within the app.
-   - Ensure the back and forward navigation works as expected.
-
-3. **Language Settings**:
-   - Validate that users can change the app's language.
-   - Ensure content displays correctly in the selected language.
-
-4. **User Authentication**:
-   - Test login and logout functionalities.
-   - Verify error messages for invalid login attempts.
-
-5. **Offline Reading**:
-   - Ensure articles can be saved for offline access.
-   - Validate that saved articles are accessible without an internet connection.
-
-6. **Edge Cases**:
-   - Test app behavior with poor or no internet connectivity.
-   - Validate input fields with special characters and long text strings.
+## Technologies Used
+<img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java Logo" width="30" height="30"> 
+<img src="https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA_icon.svg" alt="IntelliJ IDEA Logo" width="30" height="30">
+<img src="https://junit.org/junit5/assets/img/junit5-logo.png" alt="JUnit Logo" width="30" height="30">
+<img src="https://gradle.org/images/gradle-knowledge-graph-logo.png" alt="Gradle Logo" width="30" height="30">
+<img src="https://selenide.org/images/logo.svg" alt="Selenide Logo" width="30" height="30">
+<img src="https://appium.io/img/appium-logo-horizontally.svg" alt="Appium Logo" width="30" height="30">
+<img src="https://avatars.githubusercontent.com/u/5879127?s=200&v=4" alt="Allure Logo" width="30" height="30">
+<img src="https://avatars.githubusercontent.com/u/5879127?s=200&v=4" alt="Allure TestOps Logo" width="30" height="30">
+<img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" width="30" height="30">
+<img src="https://www.jenkins.io/images/logos/jenkins/jenkins.svg" alt="Jenkins Logo" width="30" height="30">
+<img src="https://telegram.org/img/t_logo.png" alt="Telegram Logo" width="30" height="30">
+<img src="https://developer.android.com/studio/images/studio-icon.svg" alt="Android Studio Logo" width="30" height="30">
 
 ---
 
-## 🔧 Technologies Used
+## Agenda
 
-### Programming Language
+1. **Test Automation Goals:** <img src="https://cdn-icons-png.flaticon.com/512/845/845646.png" alt="Goals Icon" width="30" height="30">
+   
+   - Verify the functionality and performance of the Wiki mobile app.
+   - Ensure cross-platform compatibility.
+   - Deliver detailed and actionable reports for stakeholders.
 
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+2. **Tool Integrations:** <img src="https://cdn-icons-png.flaticon.com/512/2917/2917991.png" alt="Integration Icon" width="30" height="30">
+   - <img src="https://avatars.githubusercontent.com/u/5879127?s=200&v=4" alt="Allure Logo" width="30" height="30"> **Allure Report** for in-depth reporting with screenshots and logs.
+   - <img src="https://www.jenkins.io/images/logos/jenkins/jenkins.svg" alt="Jenkins Logo" width="30" height="30"> **Jenkins** for continuous integration and dashboard tracking.
+   - <img src="https://avatars.githubusercontent.com/u/5879127?s=200&v=4" alt="Allure TestOps Logo" width="30" height="30"> **Allure TestOps** for centralized test management.
+   - <img src="https://telegram.org/img/t_logo.png" alt="Telegram Logo" width="30" height="30"> **Telegram Notifications** for instant alerts.
 
-### Test Frameworks and Libraries
-
-- ![Selenide](https://img.shields.io/badge/Selenide-43B02A?style=for-the-badge&logo=selenium&logoColor=white): For concise and readable UI tests. :contentReference[oaicite:0]{index=0}
-- ![Appium](https://img.shields.io/badge/Appium-47A248?style=for-the-badge&logo=appium&logoColor=white): For automating mobile applications.
-- ![JUnit](https://img.shields.io/badge/JUnit-25A162?style=for-the-badge&logo=junit5&logoColor=white): For organizing and executing test cases.
-
-### Build and CI Tools
-
-- ![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white): For dependency management.
-- ![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white): For continuous integration and test execution.
-
-### Device Testing
-
-- ![BrowserStack](https://img.shields.io/badge/BrowserStack-FF6C37?style=for-the-badge&logo=browserstack&logoColor=white): For cloud-based real device testing.
-
-### Reporting and Notifications
-
-- **Allure Reports**: For detailed test execution reports.
-- **Telegram Bot API**: For sending real-time test execution notifications.
+3. **CI/CD Workflow:** <img src="https://cdn-icons-png.flaticon.com/512/711/711284.png" alt="Workflow Icon" width="30" height="30">
+   - Code pushed to <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" width="30" height="30"> **GitHub** triggers Jenkins pipelines.
+   - Automated tests run on real or virtual Android devices via <img src="https://appium.io/img/appium-logo-horizontally.svg" alt="Appium Logo" width="30" height="30"> **Appium**.
+   - Results are published to **Allure TestOps** and **Jenkins** dashboards.
+   - Notifications are sent to the configured **Telegram** channel.
 
 ---
 
-## ✨ Features
-
-- **Comprehensive Test Suite**: Covers critical functionalities of the Wikipedia mobile app.
-- **Cross-Platform Testing**: Executes tests on multiple devices and OS versions via BrowserStack.
-- **Continuous Integration**: Automated test runs triggered by Jenkins pipelines.
-- **Real-Time Notifications**: Instant feedback on test results through Telegram.
-- **Detailed Reporting**: Interactive and comprehensive reports generated by Allure.
+## Test Cases List
+| Test Case ID | Test Description                                       | Priority | Status      |
+|--------------|-------------------------------------------------------|----------|-------------|
+| TC-001       | Verify search functionality with valid keywords       | High     | Automated   |
+| TC-002       | Verify app behavior with invalid search input         | Medium   | Automated   |
+| TC-003       | Check navigation to external links                   | Medium   | Automated   |
+| TC-004       | Validate app response to network disruptions          | High     | Automated   |
+| TC-005       | Ensure user settings are saved correctly              | Low      | Automated   |
+| TC-006       | Test app performance under load                       | High     | Automated   |
+| TC-007       | Verify compatibility with various Android versions    | High     | Automated   |
 
 ---
 
-## 📂 Project Structure
+## Jenkins Integration
+**Jenkins Pipeline:**
+- Link to Jenkins job: [Jenkins Wiki Mobile Project](https://jenkins.autotests.cloud/job/wiki_mobile_project/)
 
+**Key Features:**
+- Automated build and test execution triggered by GitHub events.
+- Detailed build logs and test execution results.
+- Dashboard with pass/fail trends and build duration metrics.
+
+**Reporting:**
+- Test execution data, including:
+   - Screenshots of failures.
+   - Error stack traces.
+   - Metrics for execution time and success rates.
+- Integrated with **Allure Reports** and **TestOps Dashboards**.
+
+---
+
+## Allure TestOps Integration
+- Link to project: [Allure TestOps Wiki Mobile Project](https://allure.autotests.cloud/project/4583/)
+
+**Highlights:**
+- Centralized test management and result tracking.
+- Real-time reporting with custom dashboards.
+- Defect tracking and analysis for failed tests.
+
+---
+
+## Telegram Notifications
+- Configured to send test results and Jenkins build statuses.
+- Notifications include:
+   - Build success/failure status.
+   - Summary of passed/failed tests.
+   - Links to Jenkins and Allure dashboards for detailed insights.
+
+---
+
+## Launch Settings
+### Emulator
+- Run tests on the emulator.
+- To run locally via the emulator, you will need to install and configure the emulator.
+
+### BrowserStack
+- Run tests on BrowserStack.
+- To run locally via BrowserStack, you will need to create an `auth.properties` file in `src/test/properties` and specify your username and access key.
+
+### Running Tests from the Terminal
+- For Emulator:
+  ```bash
+  ./gradlew clean mobile_tests -DdeviceHost=emulator
+  ```
+- For BrowserStack:
+  ```bash
+  ./gradlew clean mobile_tests -DdeviceHost=browserstack
+  ```
+
+---
+
+## Reporting and Dashboards
+### Allure Reports
+- Captures screenshots, logs, and test metrics.
+- View comprehensive reports locally or through the Jenkins job.
+
+### Jenkins Dashboards
+- Displays build trends and real-time test results.
+- Accessible at: [Jenkins Dashboard](https://jenkins.autotests.cloud/job/wiki_mobile_project/)
+
+### TestOps Dashboards
+- Advanced analytics with pass/fail trends and defect tracking.
+- Project link: [TestOps Dashboard](https://allure.autotests.cloud/project/4583/)
+
+---
