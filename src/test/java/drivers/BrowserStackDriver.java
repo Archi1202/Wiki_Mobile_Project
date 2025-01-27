@@ -20,13 +20,21 @@ public class BrowserStackDriver implements WebDriverProvider {
 
     private static final Logger logger = LoggerFactory.getLogger(BrowserStackDriver.class);
 
-    WebDriverConfig config;
-    AuthConfig authConfig;
-    Browserstack browserstack;
+    private final WebDriverConfig config;
+    private final AuthConfig authConfig;
+    private final Browserstack browserstack;
 
-    public void BrowserstackDriver() {
+    public BrowserStackDriver() {
         this.config = ConfigReader.INSTANCE.getWebDriverConfig();
         this.authConfig = ConfigReader.INSTANCE.getAuthConfig();
+        this.browserstack = new Browserstack();
+
+        if (config == null) {
+            throw new IllegalStateException("WebDriverConfig is not initialized properly.");
+        }
+        if (authConfig == null) {
+            throw new IllegalStateException("AuthConfig is not initialized properly.");
+        }
     }
 
     @Nonnull
@@ -47,7 +55,6 @@ public class BrowserStackDriver implements WebDriverProvider {
     private MutableCapabilities setupCapabilities() {
         MutableCapabilities caps = new MutableCapabilities();
 
-        // Validate and log critical configurations
         String user = authConfig.getBrowserstackUser();
         String key = authConfig.getBrowserstackKey();
         if (user == null || user.isEmpty() || key == null || key.isEmpty()) {
