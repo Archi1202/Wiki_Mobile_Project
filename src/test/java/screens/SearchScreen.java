@@ -20,6 +20,10 @@ public class SearchScreen {
         $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys(searchText);
     return  this;}
 
+    public SearchScreen clickOnBackButtonFromSearch() {
+        $(accessibilityId("Navigate up")).click();
+        return  this;}
+
     @Step("Navigating to the first result from the search results")
     public SearchScreen openFirstSearchResult() {
         $$(id("org.wikipedia.alpha:id/page_list_item_title")).first().click();
@@ -37,6 +41,12 @@ public class SearchScreen {
     @Step("Check that on the Main Search Screen displayed")
     public SearchScreen checkAnnouncementText(String text) {
         $(id("org.wikipedia.alpha:id/view_announcement_text")).shouldHave(text(text));
+        return this;
+    }
+
+    @Step("Check that on No results data displayed")
+    public SearchScreen verifyNoSearchResults(String text) {
+        $(id("org.wikipedia.alpha:id/results_text")).shouldHave(text(text));
         return this;
     }
 }
