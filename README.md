@@ -1,10 +1,14 @@
-# Wiki Mobile Project 
+# Wiki Mobile Project <img src="src/test/resources/images/screens/wiki_logo.png" alt="Wiki Logo" width="80" height="50">
+
 
 ## Project Overview
 The Wiki Mobile Project is an automated testing framework designed for testing mobile applications.
 
+<img src="src/test/resources/images/screens/mobile_application.jpg" alt="Mobile_application" width="500" height="350">
+
+
 ## Technologies Used
-<img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java Logo" width="40" height="40"> 
+<img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java Logo" width="40" height="40">
 <img src="https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA_icon.svg" alt="IntelliJ IDEA Logo" width="40" height="40">
 <img src="https://junit.org/junit5/assets/img/junit5-logo.png" alt="JUnit Logo" width="40" height="40">
 <img src="https://gradle.org/images/gradle-knowledge-graph-logo.png" alt="Gradle Logo" width="40" height="40">
@@ -108,16 +112,17 @@ The Wiki Mobile Project is an automated testing framework designed for testing m
 
 **Allure Report Dashboard**
 
-<img src="src/test/resources/images/screens/Allure_Overview.png" alt="Allure Logo" width="600" height="350">
+<img src="src/test/resources/images/screens/Allure_Overview.png" alt="Allure Logo" width="600" height="300">
 
 
 **Allure Report Graphs**
-<img src="src/test/resources/images/screens/Allure_graphs.png" alt="Allure Logo" width="600" height="350">
+
+<img src="src/test/resources/images/screens/Allure_graphs.png" alt="Allure Logo" width="600" height="300">
 
 
 **Allure Report test cases**
 
-<img src="src/test/resources/images/screens/Allure_Test_cases.png" alt="Allure Logo" width="600" height="350">
+<img src="src/test/resources/images/screens/Allure_Test_cases.png" alt="Allure Logo" width="600" height="300">
 
 
 ### Jenkins Dashboards
@@ -126,7 +131,7 @@ The Wiki Mobile Project is an automated testing framework designed for testing m
 
 **Jenkins Project**
 
-<img src="src/test/resources/images/screens/Jenkins_General.png" alt="Allure Logo" width="600" height="350">
+<img src="src/test/resources/images/screens/Jenkins_General.png" alt="Allure Logo" width="600" height="300">
 
 
 ### TestOps Dashboards
@@ -136,11 +141,11 @@ The Wiki Mobile Project is an automated testing framework designed for testing m
 
 **TestOps Dashboard**
 
-- <img src="src/test/resources/images/screens/TestOps_Dashboard.png" alt="Allure Logo" width="600" height="350">
+- <img src="src/test/resources/images/screens/TestOps_Dashboard.png" alt="Allure Logo" width="600" height="300">
 
 **TestOps test cases**
 
-- <img src="src/test/resources/images/screens/TestOps_Test_cases.png" alt="Allure Logo" width="600" height="350">
+- <img src="src/test/resources/images/screens/TestOps_Test_cases.png" alt="Allure Logo" width="600" height="300">
 
 ---
 
@@ -152,6 +157,19 @@ The Wiki Mobile Project is an automated testing framework designed for testing m
     - Summary of passed/failed tests.
     - Links to Allure dashboards for detailed insights.
 
-- <img src="src/test/resources/images/screens/TestOps_Test_cases.png" alt="Allure Logo" width="600" height="350">
+- <img src="src/test/resources/images/screens/Telegram_notification.png" alt="Allure Logo" width="500" height="350">
+---
+
+## Test Execution Video from BrowserStack
+
+BrowserStack is employed for remote device testing and video recording.
+
+It captures every test execution, enabling efficient debugging and offering a clear visual representation of the test steps.
+
+* Test execution videos can be accessed through Jenkins or a designated server path.
+* These videos provide critical insights into test execution flows and failures, making them an indispensable tool for test analysis.
+
+**Example Test Execution Video:**
+
 
 ---
