@@ -18,6 +18,7 @@ public class SearchTests extends TestBase {
     @Test
     @DisplayName("Verification of the successful search result displaying for {0}")
     void successfulSearchTest() {
+        introComponent.clickOnSkipButton();
         searchScreen.performSearch("Appium");
         searchScreen.verifySearchResultsPresent();
     }
@@ -25,6 +26,7 @@ public class SearchTests extends TestBase {
     @Test
     @DisplayName("Testing of the error message displaying for invalid search")
     void invalidSearchExecutionTest() {
+        introComponent.clickOnSkipButton();
         searchScreen.performSearch("GGGGGG");
         searchScreen.openFirstSearchResult();
         errorScreen.verifyErrorMessage();
