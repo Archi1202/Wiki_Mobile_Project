@@ -20,8 +20,8 @@ public class BrowserStackDriver implements WebDriverProvider {
 
     private static final Logger logger = LoggerFactory.getLogger(BrowserStackDriver.class);
 
-    private final WebDriverConfig config = ConfigReader.INSTANCE.getWebDriverConfig();
-    private final AuthConfig authConfig = ConfigReader.INSTANCE.getAuthConfig();
+    private final WebDriverConfig config = ConfigReader.INSTANCE.readWebDriverConfig();
+    private final AuthConfig authConfig = ConfigReader.INSTANCE.readAuthConfig();
     private final Browserstack browserstack = new Browserstack();
 
     @Nonnull
@@ -42,14 +42,8 @@ public class BrowserStackDriver implements WebDriverProvider {
     private MutableCapabilities setupCapabilities() {
         MutableCapabilities caps = new MutableCapabilities();
 
-        String user = authConfig.getBrowserstackUser();
-        String key = authConfig.getBrowserstackKey();
-        if (user == null || user.isEmpty() || key == null || key.isEmpty()) {
-            throw new IllegalArgumentException("BrowserStack credentials are not properly configured.");
-        }
-
-        caps.setCapability("browserstack.user", user);
-        caps.setCapability("browserstack.key", key);
+        caps.setCapability("browserstack.user", authConfig.getBrowserstackUser());
+        caps.setCapability("browserstack.key", authConfig.getBrowserstackKey());
         caps.setCapability("app", browserstack.checkUploadedAppsList());
         caps.setCapability("device", config.getDevice());
         caps.setCapability("os_version", config.getOsVersion());

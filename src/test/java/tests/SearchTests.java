@@ -16,7 +16,7 @@ public class SearchTests extends TestBase {
     ErrorScreen errorScreen = new ErrorScreen();
 
     @Test
-    @DisplayName("Verification of the successful search result displaying for {searchText}")
+    @DisplayName("Verification of the successful search result displaying for {0}")
     void successfulSearchTest() {
         searchScreen.performSearch("Appium");
         searchScreen.verifySearchResultsPresent();
@@ -31,7 +31,7 @@ public class SearchTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Verification of the successful search result displaying for {searchText} in Emulator")
+    @DisplayName("Verification of the successful search result displaying for {0} in Emulator")
     void successfulEmulationSearchTest() {
         introComponent.clickOnSkipButton();
         searchScreen.performSearch("Android");
