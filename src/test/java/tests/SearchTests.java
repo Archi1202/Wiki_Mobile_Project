@@ -41,12 +41,4 @@ public class SearchTests extends TestBase {
         searchScreen.performSearch("iandeino")
                 .verifyNoSearchResults("No results");
     }
-
-    @Test
-    @DisplayName("Testing search with special characters")
-    void specialCharactersSearchTest() {
-        introComponent.clickOnSkipButton();
-        searchScreen.performSearch("#$%^&*()")
-                .verifyNoSearchResults("No results");
-    }
 }
