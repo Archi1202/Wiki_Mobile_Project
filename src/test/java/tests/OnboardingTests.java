@@ -28,7 +28,7 @@ public class OnboardingTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Verify that user can skip Onboarding Screens")
+    @DisplayName("Verify skipping onboarding navigates to the search screen")
     public void SkipOnboardingTest() {
         introComponent.verifyTitleOnTheScreen("The Free Encyclopedia")
                         .clickOnSkipButton();

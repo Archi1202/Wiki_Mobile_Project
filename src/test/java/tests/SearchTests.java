@@ -21,23 +21,25 @@ public class SearchTests extends TestBase {
         introComponent.clickOnSkipButton();
         searchScreen.performSearch("Appium");
         searchScreen.verifySearchResultsPresent();
+        searchScreen.performSearch("appium");
+        searchScreen.verifySearchResultsPresent();
+
     }
 
     @Test
-    @DisplayName("Testing of the error message displaying for invalid search")
+    @DisplayName("Testing behavior when no search results are found")
     void invalidSearchExecutionTest() {
         introComponent.clickOnSkipButton();
-        searchScreen.performSearch("GGGGGG");
+        searchScreen.performSearch("iandeino");
         searchScreen.openFirstSearchResult();
         errorScreen.verifyErrorMessage();
     }
 
     @Test
-    @DisplayName("Verification of the successful search result displaying for {0} in Emulator")
-    void successfulEmulationSearchTest() {
+    @DisplayName("Testing search with special characters")
+    void specialCharactersSearchTest() {
         introComponent.clickOnSkipButton();
-        searchScreen.performSearch("Android");
-        searchScreen.verifySearchResultsPresent();
+        searchScreen.performSearch("@#$%^&*()");
+        errorScreen.verifyErrorMessage();
     }
-
 }
