@@ -20,22 +20,9 @@ public class BrowserStackDriver implements WebDriverProvider {
 
     private static final Logger logger = LoggerFactory.getLogger(BrowserStackDriver.class);
 
-    private final WebDriverConfig config;
-    private final AuthConfig authConfig;
-    private final Browserstack browserstack;
-
-    public BrowserStackDriver() {
-        this.config = ConfigReader.INSTANCE.getWebDriverConfig();
-        this.authConfig = ConfigReader.INSTANCE.getAuthConfig();
-        this.browserstack = new Browserstack();
-
-        if (config == null) {
-            throw new IllegalStateException("WebDriverConfig is not initialized properly.");
-        }
-        if (authConfig == null) {
-            throw new IllegalStateException("AuthConfig is not initialized properly.");
-        }
-    }
+    private final WebDriverConfig config = ConfigReader.INSTANCE.getWebDriverConfig();
+    private final AuthConfig authConfig = ConfigReader.INSTANCE.getAuthConfig();
+    private final Browserstack browserstack = new Browserstack();
 
     @Nonnull
     @Override
