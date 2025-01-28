@@ -8,17 +8,14 @@ The Wiki Mobile Project is an automated testing framework designed for testing m
 
 
 ## Technologies Used
-<img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java Logo" width="40" height="40">
-<img src="https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA_icon.svg" alt="IntelliJ IDEA Logo" width="40" height="40">
-<img src="https://junit.org/junit5/assets/img/junit5-logo.png" alt="JUnit Logo" width="40" height="40">
-<img src="https://gradle.org/images/gradle-knowledge-graph-logo.png" alt="Gradle Logo" width="40" height="40">
-<img src="src/test/resources/images/icons/selenide_logo.png" alt="Selenide Logo" width="70" height="40">
-<img src="src/test/resources/images/icons/appium_logo.png" alt="Appium Logo" width="40" height="40">
-<img src="https://avatars.githubusercontent.com/u/5879127?s=200&v=4" alt="Allure Logo" width="40" height="40">
-<img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" width="40" height="40">
-<img src="https://www.jenkins.io/images/logos/jenkins/jenkins.svg" alt="Jenkins Logo" width="40" height="40">
-<img src="https://telegram.org/img/t_logo.png" alt="Telegram Logo" width="40" height="40">
-<img src="https://developer.android.com/studio/images/studio-icon.svg" alt="Android Studio Logo" width="40" height="40">
+
+## Technologies Used
+
+| **Technology Name** | **Java** | **IntelliJ IDEA** | **JUnit 5** | **Gradle** | **Selenide** | **Appium** | **Allure** | **GitHub** | **Jenkins** | **Telegram** | **Android Studio** |
+|----------------------|----------|-------------------|-------------|------------|--------------|------------|------------|------------|-------------|--------------|---------------------|
+| **Logo**            | <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java Logo" width="40" height="40"> | <img src="https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA_icon.svg" alt="IntelliJ IDEA Logo" width="40" height="40"> | <img src="https://junit.org/junit5/assets/img/junit5-logo.png" alt="JUnit Logo" width="40" height="40"> | <img src="https://gradle.org/images/gradle-knowledge-graph-logo.png" alt="Gradle Logo" width="40" height="40"> | <img src="src/test/resources/images/icons/selenide_logo.png" alt="Selenide Logo" width="70" height="40"> | <img src="src/test/resources/images/icons/appium_logo.png" alt="Appium Logo" width="40" height="40"> | <img src="https://avatars.githubusercontent.com/u/5879127?s=200&v=4" alt="Allure Logo" width="40" height="40"> | <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" width="40" height="40"> | <img src="https://www.jenkins.io/images/logos/jenkins/jenkins.svg" alt="Jenkins Logo" width="40" height="40"> | <img src="https://telegram.org/img/t_logo.png" alt="Telegram Logo" width="40" height="40"> | <img src="https://developer.android.com/studio/images/studio-icon.svg" alt="Android Studio Logo" width="40" height="40"> |
+
+
 
 ---
 
@@ -171,5 +168,6 @@ It captures every test execution, enabling efficient debugging and offering a cl
 
 **Example Test Execution Video:**
 
+https://github.com/user-attachments/assets/685728ce-5d48-43eb-9b2e-577d51aad9dc
 
 ---
