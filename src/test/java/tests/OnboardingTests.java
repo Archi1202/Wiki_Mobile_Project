@@ -10,8 +10,8 @@ import screens.components.IntroComponent;
 @DisplayName("Tests for Wikipedia Onboarding Screens")
 
 public class OnboardingTests extends TestBase {
-    IntroComponent introComponent = new IntroComponent();
-    SearchScreen searchScreen = new SearchScreen();
+    final IntroComponent introComponent = new IntroComponent();
+    final SearchScreen searchScreen = new SearchScreen();
 
     @Test
     @DisplayName("Successful verification of Onboarding Screens")

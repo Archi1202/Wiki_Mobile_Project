@@ -23,9 +23,8 @@ public class IntroComponent {
 
 
     @Step("Click on the Skip button")
-    public IntroComponent clickOnSkipButton() {
+    public void clickOnSkipButton() {
         skipButton.click();
-        return this;
     }
 
     @Step("Click on the Continue button")
@@ -35,8 +34,7 @@ public class IntroComponent {
     }
 
     @Step("Click on the Get Started")
-    public IntroComponent clickOnGetStarted() {
+    public void clickOnGetStarted() {
         getStartedButton.click();
-        return this;
     }
 }

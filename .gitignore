@@ -1,24 +1,30 @@
-# Compiled class file
+# Compiled class files
 *.class
 
-# Log file
+# Log files
 *.log
 
-# BlueJ files
-*.ctxt
+# IDE-specific files
+.idea/
+*.iml
+.vscode/
+*.swp
 
-.gradle
-.idea
-build
-gradle
-gradlew.bat
+# Gradle & Build
+.gradle/
+build/
+gradle/
 gradlew
+gradlew.bat
 settings.gradle
 
-# Mobile Tools for Java (J2ME)
+# Maven
+target/
+
+# J2ME
 .mtj.tmp/
 
-# Package Files #
+# Package Files
 *.jar
 *.war
 *.nar
@@ -27,6 +33,15 @@ settings.gradle
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# Virtual machine crash logs
 hs_err_pid*
 replay_pid*
+
+# OS-specific files
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+
+# Environment variable files
+.env

@@ -10,8 +10,8 @@ import screens.components.IntroComponent;
 @DisplayName("Tests for Android OS of Search functionality for Wikipedia App")
 public class SearchTests extends TestBase {
 
-    IntroComponent introComponent = new IntroComponent();
-    SearchScreen searchScreen = new SearchScreen();
+    final IntroComponent introComponent = new IntroComponent();
+    final SearchScreen searchScreen = new SearchScreen();
 
     @Test
     @DisplayName("Verification of the successful search result displayed")

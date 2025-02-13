@@ -4,7 +4,7 @@
 ## Project Overview
 The Wiki Mobile Project is an automated testing framework designed for testing mobile applications.
 
-<img src="src/test/resources/images/screens/mobile_application.jpg" alt="Mobile_application" width="500" height="350">
+<img src="media/images/screens/mobile_application.jpg" alt="Mobile_application" width="500" height="350">
 
 
 ## Technologies Used
@@ -12,8 +12,8 @@ The Wiki Mobile Project is an automated testing framework designed for testing m
 <img src="https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA_icon.svg" alt="IntelliJ IDEA Logo" width="40" height="40">
 <img src="https://junit.org/junit5/assets/img/junit5-logo.png" alt="JUnit Logo" width="40" height="40">
 <img src="https://gradle.org/images/gradle-knowledge-graph-logo.png" alt="Gradle Logo" width="40" height="40">
-<img src="src/test/resources/images/icons/selenide_logo.png" alt="Selenide Logo" width="70" height="40">
-<img src="src/test/resources/images/icons/appium_logo.png" alt="Appium Logo" width="40" height="40">
+<img src="media/images/icons/selenide_logo.png" alt="Selenide Logo" width="70" height="40">
+<img src="media/images/icons/appium_logo.png" alt="Appium Logo" width="40" height="40">
 <img src="https://avatars.githubusercontent.com/u/5879127?s=200&v=4" alt="Allure Logo" width="40" height="40">
 <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" width="40" height="40">
 <img src="https://www.jenkins.io/images/logos/jenkins/jenkins.svg" alt="Jenkins Logo" width="40" height="40">
@@ -33,12 +33,12 @@ The Wiki Mobile Project is an automated testing framework designed for testing m
 2. **Tool Integrations:**
    - <img src="https://avatars.githubusercontent.com/u/5879127?s=200&v=4" alt="Allure Logo" width="40" height="40"> Allure Report for in-depth reporting with screenshots and logs.
    - <img src="https://www.jenkins.io/images/logos/jenkins/jenkins.svg" alt="Jenkins Logo" width="40" height="40"> Jenkins for continuous integration and dashboard tracking.
-   - <img src="src/test/resources/images/icons/TestOpsLogo.png" alt="Allure TestOps Logo" width="150" height="40"> for centralized test management.
+   - <img src="media/images/icons/TestOpsLogo.png" alt="Allure TestOps Logo" width="150" height="40"> for centralized test management.
    - <img src="https://telegram.org/img/t_logo.png" alt="Telegram Logo" width="30" height="30"> Telegram Notifications for instant alerts.
 
 3. **CI/CD Workflow:**
    - Code pushed to <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" width="30" height="30"> **GitHub** triggers Jenkins pipelines.
-   - Automated tests run on real or virtual Android devices via <img src="src/test/resources/images/icons/appium_logo.png" alt="Appium Logo" width="30" height="30"> **Appium**.
+   - Automated tests run on real or virtual Android devices via <img src="media/images/icons/appium_logo.png" alt="Appium Logo" width="30" height="30"> **Appium**.
    - Results are published to **Allure TestOps** and **Jenkins** dashboards.
    - Notifications are sent to the configured **Telegram** channel.
 
@@ -109,20 +109,22 @@ The Wiki Mobile Project is an automated testing framework designed for testing m
 ### Allure Reports
 - Captures screenshots, logs, and test metrics.
 - View comprehensive reports locally or through the Jenkins job.
+- Link to Allure Report: [Allure Report](https://jenkins.autotests.cloud/job/wiki_mobile_project/allure/)
+
 
 **Allure Report Dashboard**
 
-<img src="src/test/resources/images/screens/Allure_Overview.png" alt="Allure Logo" width="600" height="300">
+<img src="media/images/screens/Allure_Overview.png" alt="Allure Logo" width="600" height="300">
 
 
 **Allure Report Graphs**
 
-<img src="src/test/resources/images/screens/Allure_graphs.png" alt="Allure Logo" width="600" height="300">
+<img src="media/images/screens/Allure_graphs.png" alt="Allure Logo" width="600" height="300">
 
 
 **Allure Report test cases**
 
-<img src="src/test/resources/images/screens/Allure_Test_cases.png" alt="Allure Logo" width="600" height="300">
+<img src="media/images/screens/Allure_Test_cases.png" alt="Allure Logo" width="600" height="300">
 
 
 ### Jenkins Dashboards
@@ -131,7 +133,7 @@ The Wiki Mobile Project is an automated testing framework designed for testing m
 
 **Jenkins Project**
 
-<img src="src/test/resources/images/screens/Jenkins_General.png" alt="Allure Logo" width="600" height="300">
+<img src="media/images/screens/Jenkins_General.png" alt="Allure Logo" width="600" height="300">
 
 
 ### TestOps Dashboards
@@ -141,11 +143,11 @@ The Wiki Mobile Project is an automated testing framework designed for testing m
 
 **TestOps Dashboard**
 
-- <img src="src/test/resources/images/screens/TestOps_Dashboard.png" alt="Allure Logo" width="600" height="300">
+- <img src="media/images/screens/TestOps_Dashboard.png" alt="Allure Logo" width="600" height="300">
 
 **TestOps test cases**
 
-- <img src="src/test/resources/images/screens/TestOps_Test_cases.png" alt="Allure Logo" width="600" height="300">
+- <img src="media/images/screens/TestOps_Test_cases.png" alt="Allure Logo" width="600" height="300">
 
 ---
 
@@ -157,7 +159,7 @@ The Wiki Mobile Project is an automated testing framework designed for testing m
     - Summary of passed/failed tests.
     - Links to Allure dashboards for detailed insights.
 
-- <img src="src/test/resources/images/screens/Telegram_notification.png" alt="Allure Logo" width="500" height="350">
+- <img src="media/images/screens/Telegram_notification.png" alt="Allure Logo" width="500" height="350">
 ---
 
 ## Test Execution Video from BrowserStack
