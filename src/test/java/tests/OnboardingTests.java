@@ -31,7 +31,7 @@ public class OnboardingTests extends TestBase {
     @DisplayName("Verify skipping onboarding navigates to the search screen")
     public void SkipOnboardingTest() {
         introComponent.verifyTitleOnTheScreen("The Free Encyclopedia")
-                        .clickOnSkipButton();
+                .clickOnSkipButton();
         searchScreen.checkAnnouncementText("Customize your Explore feed");
     }
 }

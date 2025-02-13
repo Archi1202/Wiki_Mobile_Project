@@ -18,11 +18,13 @@ public class SearchScreen {
         }
         $(accessibilityId("Search Wikipedia")).click();
         $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys(searchText);
-    return  this;}
+        return this;
+    }
 
     public SearchScreen clickOnBackButtonFromSearch() {
         $(accessibilityId("Navigate up")).click();
-        return  this;}
+        return this;
+    }
 
     @Step("Navigating to the first result from the search results")
     public void openFirstSearchResult() {
