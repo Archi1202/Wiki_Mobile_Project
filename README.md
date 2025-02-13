@@ -32,7 +32,7 @@ The Wiki Mobile Project is an automated testing framework designed for testing m
 
 3. **CI/CD Workflow:**
    - Code pushed to <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" width="30" height="30"> **GitHub** triggers Jenkins pipelines.
-   - Automated tests run on real or virtual Android devices via <img src="src/test/resources/images/icons/appium_logo.png" alt="Appium Logo" width="30" height="30"> **Appium**.
+   - Automated tests run on real or virtual Android devices via <img src="media/images/icons/appium_logo.png" alt="Appium Logo" width="30" height="30"> **Appium**.
    - Results are published to **Allure TestOps** and **Jenkins** dashboards.
    - Notifications are sent to the configured **Telegram** channel.
 
